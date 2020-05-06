@@ -49,8 +49,8 @@ async def main():
             draw(digit, nums[cur_time[digit]], rand_colors[digit])
 
         if show_colon:
-            unicornhatmini.set_pixel(8, 1, 255, 255, 255)
-            unicornhatmini.set_pixel(8, 3, 255, 255, 255)
+            unicornhatmini.set_pixel(8, 2, 255, 255, 255)
+            unicornhatmini.set_pixel(8, 4, 255, 255, 255)
 
         unicornhatmini.show()
 
@@ -60,7 +60,7 @@ async def main():
 def draw(position, num, color):
     for i in range(0, 20):
         x = i % 4
-        y = int(i / 4)
+        y = int(i / 4)+1
 
         eff_x = x+(4*position)
         if position > 1:
